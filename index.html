@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang='pt-BR'>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>JSON Tree Viewer</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/index.js"></script>
+  <link rel='icon' type='image/svg' href='assets/icon.svg' />
+  <link rel='stylesheet' href='css/style.css' />
+  <script src='js/lib.js'></script>
+  <script src='js/index.js' defer></script>
 </head>
 <body>
   <main id='container'>
-    <h1>JSON Tree Viewer</h1>
-    <p>Simple JSON Viewer that runs completely on-client. No data exchange</p>
-    <button>Load JSON</button>
+    <h1 id='title'>JSON Tree Viewer</h1>
+    <p id='description'>
+      Simple JSON Viewer that runs completely on-client. No data exchange
+    </p>
+    <div id='json-input-container'>
+      <label
+        id='json-input-label'
+        for='json-input'
+        aria-label='Load JSON'
+
+      >
+        Load JSON
+      </label>
+      <input
+        id='json-input'
+        type='file'
+        accept='.json'
+      />
+      <span id='json-input-error'>
+        Invalid file. Please load a valid JSON file.
+      </span>
+    </div>
   </main>
 </body>
 </html>
